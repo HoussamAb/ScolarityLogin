@@ -1,0 +1,66 @@
+<div class="main_div" fxLayout="column" fxLayoutAlign="space-evenly center" >
+
+  <button mat-raised-button (click)="openDialog()" class="add">
+    <mat-icon>library_add</mat-icon>
+    Ajouter une pièce</button>
+
+  <mat-form-field>
+    <mat-label>Filtrer</mat-label>
+    <input matInput (keyup)="applyFilter($event)" >
+  </mat-form-field>
+
+  
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <!-- id Column -->
+  <ng-container matColumnDef="id" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="title"> Id. </th>
+      <td mat-cell *matCellDef="let element" > {{element.id}} </td>
+  </ng-container>
+
+  <!-- fullname Column -->
+  <ng-container matColumnDef="label" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="title"> Libellé </th>
+      <td mat-cell *matCellDef="let element" > {{element.label}} </td>
+  </ng-container>
+
+  <!-- ispermanent Column -->
+  <ng-container matColumnDef="siCache" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="title"> C'est cachée </th>
+      <td mat-cell *matCellDef="let element" >  
+        <mat-slide-toggle  class="example-margin" checked="{{element.siCache}}" disabled>
+        
+        </mat-slide-toggle> Cachée </td>
+  </ng-container>
+
+   <!-- ispermanent Column -->
+   <ng-container matColumnDef="nbr_total" type="hidden">
+    <th mat-header-cell *matHeaderCellDef > </th>
+    <td mat-cell *matCellDef="let element" > </td>
+</ng-container>
+
+  <!-- ispermanent Column -->
+  <ng-container matColumnDef="nbr_total_par_jour" type="hidden">
+    <th mat-header-cell *matHeaderCellDef ></th>
+    <td mat-cell *matCellDef="let element" > </td>
+</ng-container>
+  <!-- ispermanent Column -->
+  <ng-container matColumnDef="nbr_demande_par_jour" type="hidden">
+    <th mat-header-cell *matHeaderCellDef type="hidden"> </th>
+    <td mat-cell *matCellDef="let element" > </td>
+</ng-container>
+
+  
+  <!--Buttons-->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef class="title" >Action</th>
+    <td mat-cell *matCellDef="let row" class="title">
+      <button mat-icon-button (click)="onEdit(row)"><mat-icon>launch</mat-icon></button>
+      <button mat-icon-button (click)="onDelete(row.id)" color="warn"><mat-icon>delete_outline</mat-icon></button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>

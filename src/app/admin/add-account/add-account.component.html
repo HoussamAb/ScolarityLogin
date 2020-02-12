@@ -1,1 +1,144 @@
-<p>add-account works!</p>
+
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup"  >
+      <form [formGroup]="firstFormGroup" class="controles-container">
+        <ng-template matStepLabel>Etat civile : </ng-template> 
+        <div class="example-full-width marg">
+                <mat-radio-group aria-label="Select an option" formControlName="ctrlTyptOfAcc" required>
+                    <mat-radio-button class=" marg"  value="Etudiant"> Etudiant  </mat-radio-button>
+                    <mat-radio-button class=" marg"  value="Professeur"> Professeur  </mat-radio-button>
+                    <mat-radio-button class=" marg"  value="Operateur"> Operateur  </mat-radio-button>
+                </mat-radio-group>
+            </div>
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="outline" >
+            <mat-label>Nom :</mat-label>
+            <input matInput placeholder="Nom ..."
+            formControlName="ctrlNom" required>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Prenom :</mat-label>
+            <input matInput placeholder="Prenom ..."
+            formControlName="ctrlPrenom" required>
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>CIN :</mat-label>
+            <input matInput placeholder="CIN ..."
+            formControlName="ctrlCIN" required>
+            </mat-form-field>
+        </div>
+        
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Date de naissance :</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="Date de naissance ..." formControlName="ctrlDN" 
+              readonly (click)="picker.open()">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>   
+        </div>
+
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Ville :</mat-label>
+            <input matInput placeholder="Ville ..."
+            formControlName="ctrlVille" required>
+            </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Tel :</mat-label>
+            <input matInput type="number" placeholder="0600000000" class="example-right-align"
+            formControlName="ctrlTel" required>
+            </mat-form-field>
+        </div>
+
+        <div>
+          <button mat-flat-button color="accent" matStepperNext (click)="show()">Suivant</button>
+        </div>
+        
+    </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Informations suplémentaire : </ng-template>
+        <div *ngIf='etudiant'>
+            <div class="form-group">
+                <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>No Appogé : </mat-label>
+                <input matInput type="number" placeholder="N appogé .."
+                formControlName="ctrlNAppogee" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Filier : </mat-label>
+                    <mat-select formControlName="ctrlFilier" required>
+                            <mat-option>None</mat-option>
+                            <mat-option *ngFor="let f of listFs" [value]="f.idFiliere">{{f.idFiliere}} : {{f.typeFiliere}}</mat-option>
+                          </mat-select>
+                    </mat-form-field>
+            </div>
+            <div class="form-group">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Email :</mat-label>
+                    <input matInput placeholder="Ex. pat@example.com"
+                    formControlName="ctrlEmail" type="email" required>
+                    </mat-form-field>
+                </div>
+        </div>
+        <div *ngIf='professeur || operateur'>
+                
+                <div class="form-group" *ngIf='professeur'>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Filieres :</mat-label>
+                    <input matInput placeholder="Modules ..."
+                    formControlName="ctrlModules" required>
+                    <mat-select formControlName="ctrlModules" required>
+                          <mat-option>None</mat-option>
+                          <mat-option *ngFor="let f of listFs" [value]="f.idFiliere">{{f.idFiliere}} : {{f.typeFiliere}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="form-group">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Email : </mat-label>
+                        <input matInput placeholder="Tel ..."
+                        formControlName="ctrlEmail" type="email" required>
+                        </mat-form-field>
+                </div>
+                
+            </div>
+        <div>
+          <button mat-flat-button color="accent" matStepperPrevious>Retour</button>
+          <button mat-flat-button color="accent" matStepperNext (click)="showInputData()">Suivant</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Terminé : </ng-template>
+        <mat-list>
+            <mat-list-item>Type de compte :  {{typeOfAcc}} </mat-list-item>
+            <mat-list-item>Nom :  {{nom}} </mat-list-item>
+            <mat-list-item>Prenom :  {{prenom}} </mat-list-item>
+            <mat-list-item>CIN :  {{CIN}} </mat-list-item>
+            <mat-list-item>Date de naissance :  {{DN}} </mat-list-item>
+            <mat-list-item>Ville :  {{ville}} </mat-list-item>
+            <mat-list-item>Tel :  {{tel}} </mat-list-item>
+            <mat-list-item>Email :  {{email}} </mat-list-item>
+            <div *ngIf='etudiant'><mat-list-item >Numro Appogee :  {{nAppogee}} </mat-list-item></div>
+            <div *ngIf='etudiant'><mat-list-item >Filier :  {{filier}} </mat-list-item></div>
+            <div *ngIf='professeur || operateur'><mat-list-item>Modules :  {{modules}} </mat-list-item></div>
+        </mat-list>
+      <div>
+        <button mat-flat-button color="accent" matStepperPrevious>Retour</button>
+        <button mat-flat-button color="accent" (click)="addAcc()">Reset</button>
+    </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+ 

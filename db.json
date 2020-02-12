@@ -1,0 +1,688 @@
+{
+  "Etudiants": [
+    {
+      "id": 1,
+      "nom": "Rayhan",
+      "apogee": "98798",
+      "cin": "A233232",
+      "prenom": "Bouchaara",
+      "datenaissance": "2017-02-13T23:00:00.000Z",
+      "ville": "zazate",
+      "idFiliere": "",
+      "Tel": "0988",
+      "siValide": true,
+      "password": "Thu Feb 27 2020 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      "image": "aaaa",
+      "email": "KUUI",
+      "semestre": [
+        12
+      ],
+      "noteModule": 12
+    },
+    {
+      "id": 2,
+      "nom": "bounnnnn",
+      "apogee": "7657657",
+      "cin": "9789787",
+      "prenom": "sam",
+      "datenaissance": "1993-11-10T23:00:00.000Z",
+      "ville": "zazate",
+      "idFiliere": "",
+      "Tel": "9798687678",
+      "siValide": true,
+      "password": "11/11/1993",
+      "image": "aaaa",
+      "email": "sam@gmail.com",
+      "semestre": [
+        12
+      ],
+      "noteModule": 12
+    },
+    {
+      "id": 4,
+      "nom": "bou",
+      "apogee": "979786",
+      "cin": "P33444",
+      "prenom": "SAMIRA",
+      "datenaissance": "Thu Oct 14 1993 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      "ville": "jhjkjkjjj",
+      "idFiliere": "",
+      "Tel": "ghfuyf",
+      "siValide": true,
+      "password": "SA23323",
+      "image": "aaaa",
+      "email": "jej@gmail.com",
+      "semestre": [],
+      "noteModule": 0
+    },
+    {
+      "id": 5,
+      "nom": "AIT ALI",
+      "apogee": ", dkl",
+      "cin": "P33444",
+      "prenom": "SAMIRA",
+      "datenaissance": "1993-10-06T23:00:00.000Z",
+      "ville": "2/20/2020",
+      "idFiliere": "",
+      "Tel": "06787878",
+      "siValide": true,
+      "password": "samira@hhh12121",
+      "image": "aaaa",
+      "email": "rere@gmail.com",
+      "semestre": [],
+      "noteModule": 0
+    },
+    {
+      "id": 6,
+      "nom": "bou",
+      "apogee": "cdjdcj",
+      "cin": "P33444",
+      "prenom": "SAMIRA",
+      "datenaissance": "1993-01-31T23:00:00.000Z",
+      "ville": "casa",
+      "idFiliere": "",
+      "Tel": "06787878",
+      "siValide": true,
+      "password": "05/02/2020",
+      "image": "aaaa",
+      "email": "sami@gmail.com",
+      "semestre": [],
+      "noteModule": 0
+    }
+  ],
+  "Professeurs": [
+    {
+      "id": 1,
+      "cin": "P33444",
+      "nom": "Boulaaid",
+      "prenom": "SAMIRA",
+      "module": [],
+      "datenaissance": "Thu Nov 03 1994 00:00:00 GMT+0100 (heure normale d’Europe centrale)",
+      "ville": "zazate",
+      "Tel": "0678787878",
+      "password": "P33444",
+      "email": "test@gmail.com"
+    },
+    {
+      "id": 2,
+      "cin": "P343434",
+      "nom": "AMAL",
+      "prenom": "Boulaaid",
+      "module": [],
+      "datenaissance": "1993-10-02T23:00:00.000Z",
+      "ville": "rabat",
+      "Tel": "07070709",
+      "password": "21/21/34",
+      "email": "a.boulaaid@gmail.com"
+    }
+  ],
+  "Operateurs": [
+    {
+      "id": 1,
+      "cin": "P33444",
+      "nom": "bou",
+      "prenom": "SAMIRA",
+      "datenaissance": "1993-11-29T23:00:00.000Z",
+      "ville": "zazate",
+      "Tel": "0678787878",
+      "password": "P33444",
+      "email": "bou_samira@gmail.com"
+    }
+  ],
+  "Filieres": [
+    {
+      "id": 1,
+      "idFiliere": "test",
+      "typeFiliere": "Doctorat",
+      "module": [],
+      "titre": "Doctorat : test",
+      "departement": "Informatique",
+      "chefdefiliere": "BoulaaidSAMIRA"
+    },
+    {
+      "id": 3,
+      "idFiliere": "test",
+      "typeFiliere": "Licence Pro",
+      "module": [],
+      "titre": "Master Rech : test",
+      "departement": "Informatique",
+      "chefdefiliere": "BoulaaidSAMIRA"
+    },
+    {
+      "id": 4,
+      "idFiliere": "test",
+      "typeFiliere": "Licence Pro",
+      "module": [
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        },
+        {
+          "idModule": "a",
+          "titre": "a",
+          "idfiliere": 0,
+          "Chargehoraire": 0,
+          "idprof": "",
+          "anneValidation": "",
+          "session": ""
+        }
+      ],
+      "titre": "test titre",
+      "departement": "Informatique",
+      "chefdefiliere": "AMALBoulaaid"
+    },
+    {
+      "id": 5,
+      "idFiliere": "test",
+      "typeFiliere": "Licence",
+      "module": [],
+      "titre": "Doctorat",
+      "departement": "Informatique",
+      "chefdefiliere": "BoulaaidSAMIRA"
+    },
+    {
+      "id": 6,
+      "idFiliere": "bbb",
+      "typeFiliere": "Doctorat",
+      "module": [],
+      "titre": "kkkkk",
+      "departement": "Langues Etrangères Appliquées",
+      "chefdefiliere": "BoulaaidSAMIRA"
+    },
+    {
+      "idFiliere": "Images",
+      "typeFiliere": "rrrrrrrrr",
+      "module": [],
+      "titre": "Doctorat",
+      "departement": "Images",
+      "chefdefiliere": "Images",
+      "id": 8
+    },
+    {
+      "idFiliere": "Images",
+      "typeFiliere": "relevé de note S3",
+      "module": [],
+      "titre": "Doctorat",
+      "departement": "Images",
+      "chefdefiliere": "Images",
+      "id": 9
+    }
+  ],
+  "Demandes": [
+    {
+      "id": 1,
+      "idEtudiant": 2,
+      "idPiece": "Attestation de scolarité",
+      "date_creation": "2019/02/05",
+      "date_recuperation": "2019/02/10",
+      "siValide": false
+    },
+    {
+      "id": 2,
+      "idEtudiant": 1,
+      "idPiece": "Relevé de note S2",
+      "date_creation": "2019/01/14",
+      "date_recuperation": "2019/01/16",
+      "siValide": false
+    },
+    {
+      "id": 3,
+      "idEtudiant": 1,
+      "idPiece": "BAC +2",
+      "date_creation": "2019/01/14",
+      "date_recuperation": "2019/01/16",
+      "siValide": true
+    },
+    {
+      "id": 4,
+      "idEtudiant": 1,
+      "idPiece": "Diplôme Master",
+      "date_creation": "2019/01/23",
+      "date_recuperation": "2019/01/25",
+      "siValide": true
+    }
+  ],
+  "Pieces": [
+    {
+      "id": 9,
+      "label": "Relevé de note S2",
+      "siCache": true,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 29,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/14"
+    },
+    {
+      "id": 14,
+      "label": "BAC +5",
+      "siCache": false,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 14,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/16"
+    },
+    {
+      "id": 15,
+      "label": "Attestation de réussite",
+      "siCache": true,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 8,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/16"
+    },
+    {
+      "id": 17,
+      "label": "Relevé de note s1",
+      "siCache": false,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 12,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/16"
+    },
+    {
+      "id": 18,
+      "label": "Diplôme Master",
+      "siCache": true,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 16,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/17"
+    },
+    {
+      "id": 19,
+      "label": "Autres pièces tr",
+      "siCache": true,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 12,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/14"
+    },
+    {
+      "id": 20,
+      "label": "Depôt AMO",
+      "siCache": false,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 0,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/14"
+    },
+    {
+      "id": 21,
+      "label": "BAC+3 test",
+      "siCache": false,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 2,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/16"
+    },
+    {
+      "id": 23,
+      "label": "Attestation de scolarité",
+      "siCache": true,
+      "nbr_total": 0,
+      "nbr_total_par_jour": 0,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/15"
+    },
+    {
+      "id": 25,
+      "label": "test ts test",
+      "siCache": "false",
+      "nbr_total": 0,
+      "nbr_total_par_jour": 0,
+      "nbr_demande_par_jour": 0,
+      "date_prochain_rdv": "2020/02/17"
+    }
+  ],
+  "reclamations": [
+    {
+      "id": "raCiDka",
+      "etudiant": 1,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 3",
+      "note": 14,
+      "notePV": 12,
+      "partie": "Partie 2 ",
+      "date": "2020/02/09",
+      "siValide": true
+    },
+    {
+      "id": "aWvW6IF",
+      "etudiant": 2,
+      "commantaire": "hamid",
+      "type": "pedagogique",
+      "module": "",
+      "note": 0,
+      "notePV": 0,
+      "partie": "",
+      "date": "2020/01/23",
+      "siValide": false
+    },
+    {
+      "id": "2_BuMFH",
+      "etudiant": 1,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 2",
+      "note": 18,
+      "notePV": 14,
+      "partie": "Partie 1 ",
+      "date": "2020/02/01",
+      "siValide": false
+    },
+    {
+      "id": "adh8S2y",
+      "etudiant": 1,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 1",
+      "note": 15,
+      "notePV": 12,
+      "partie": "Partie 2 ",
+      "date": "2020/02/05",
+      "siValide": true
+    },
+    {
+      "id": "3kqVhCv",
+      "etudiant": 2,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 3",
+      "note": 17,
+      "notePV": 13,
+      "partie": "Partie 2 ",
+      "date": "2020/01/23",
+      "siValide": true
+    },
+    {
+      "id": "acTYqvL",
+      "etudiant": 2,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 2",
+      "note": 17,
+      "notePV": 12,
+      "partie": "Partie 2 ",
+      "date": "2019/01/25",
+      "siValide": true
+    },
+    {
+      "id": "KY9Mz_e",
+      "etudiant": 1,
+      "commantaire": "fjf",
+      "type": "pedagogique",
+      "module": "",
+      "note": 0,
+      "notePV": 0,
+      "partie": "",
+      "date": "2019/01/25",
+      "siValide": true
+    },
+    {
+      "id": "KY9MAS",
+      "etudiant": 2,
+      "commantaire": "Test test",
+      "type": "pedagogique",
+      "module": "",
+      "note": 0,
+      "notePV": 0,
+      "partie": "",
+      "date": "2019/01/21",
+      "siValide": true
+    },
+    {
+      "id": "HCH0Rbu",
+      "etudiant": 1,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 5",
+      "note": 12,
+      "notePV": 123,
+      "partie": "Partie 2 ",
+      "date": "2019/01/25",
+      "siValide": false
+    },
+    {
+      "id": "Ui44yph",
+      "etudiant": 2,
+      "commantaire": "",
+      "type": "note",
+      "module": "module 4",
+      "note": 15,
+      "notePV": 12,
+      "partie": "Partie 2 ",
+      "date": "2019/01/25",
+      "siValide": true
+    }
+  ],
+  "Avis": [
+    {
+      "id": 1,
+      "idprof": 2,
+      "corp": "Corps d'avis 111",
+      "title": "Test titre 11",
+      "date": "2019/01/29",
+      "siValide": false
+    },
+    {
+      "id": 2,
+      "idprof": 3,
+      "corp": "Corps d'avis 222",
+      "title": "Test titre 22",
+      "date": "2019/02/05",
+      "siValide": false
+    },
+    {
+      "id": 3,
+      "idprof": 1,
+      "corp": "Corps d'avis 333",
+      "title": "Test titre 33",
+      "date": "2019/02/01",
+      "siValide": true
+    }
+  ]
+}

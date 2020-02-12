@@ -1,0 +1,64 @@
+<h2 mat-dialog-title>
+    Modifier Etudiant
+  </h2>
+  <form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+  
+  <mat-dialog-content>
+        
+    <ng-template matStepLabel>Etat civile : </ng-template> 
+    <mat-grid-list cols="3" rowHeight="3:1">
+            <mat-grid-tile> 
+                <mat-form-field appearance="standard">
+                    <mat-label>Identifiant Filiere :</mat-label>
+                    <input matInput placeholder="id ..." formControlName="idFiliere" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile> 
+              <mat-form-field>
+                  <mat-label>Type Filiere :</mat-label>
+                  <mat-select formControlName="typeFiliere" required>
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let type of typesF" [value]="type">{{type}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile> 
+                <mat-form-field appearance="standard">
+                    <mat-label>Titre Filiere :</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="titre" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field >
+                    <mat-label>Departement Filiere :</mat-label>
+                    <mat-select formControlName="departement" required>
+                        <mat-option>None</mat-option>
+                        <mat-option *ngFor="let deptype of departements" [value]="deptype">{{deptype}}</mat-option>
+                      </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                        <mat-label>Chef Filiere :</mat-label>
+                        <mat-select formControlName="chefdefiliere" required>
+                          <mat-option>None</mat-option>
+                          <mat-option *ngFor="let p of prof" [value]="p.nom +''+ p.prenom">{{p.nom +" "+ p.prenom}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile>
+            
+        </mat-grid-list>
+    <input  formControlName="id"  hidden>
+    <input  formControlName="module"  hidden>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="primary"  type="submit" 
+         >Enregistrer</button>
+      
+      <button mat-raised-button  mat-dialog-close>Annuler</button>
+</mat-dialog-actions>
+   
+  </form>
+  

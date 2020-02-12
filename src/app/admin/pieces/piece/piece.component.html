@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>
+  Gérer une Pièce
+</h2>
+<form [formGroup]="service.form" class="normal-form" (submit)="onSubmit()">
+
+<mat-dialog-content>
+       <div class="controles-container">
+        <div>
+          <input type="hidden" formControlName="id" > 
+          <mat-form-field class="full-width">
+              <input formControlName="label" matInput placeholder="Libellé de pièce*">
+              <mat-error>Ce champ est requis.</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <div ><h5 >Etat de la pièce</h5></div>
+          Visible
+          <mat-slide-toggle  class="example-margin" formControlName="siCache">
+          Caché
+          </mat-slide-toggle>
+          <input type="number" formControlName="nbr_total" value="0" hidden> 
+
+          <input type="number" formControlName="nbr_total_par_jour" value="0" hidden> 
+
+          <input type="number" formControlName="nbr_demande_par_jour" value="0" hidden> 
+          <input type="text" formControlName="date_prochain_rdv" value="" hidden> 
+
+        </div>
+      </div>
+    
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-raised-button color="primary"  type="submit" 
+    [disabled]="service.form.invalid">Enregistrer</button>
+    
+    <button mat-raised-button  mat-dialog-close>Annuler</button>
+  </mat-dialog-actions>
+ 
+</form>

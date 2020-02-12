@@ -1,0 +1,57 @@
+<mat-accordion >
+        
+    <mat-toolbar>Filieres et ses Modules</mat-toolbar>
+ <div *ngFor='let element of dataSource '>
+ <mat-expansion-panel (opened)="panelOpenState = true"
+                 (closed)="panelOpenState = false">
+     <mat-expansion-panel-header>
+     <mat-panel-title >
+             {{element.idFiliere}}
+     </mat-panel-title>
+     <mat-panel-title >
+             {{element.idFiliere}}
+     </mat-panel-title>
+     <mat-panel-description >
+             {{element.titre}}
+     </mat-panel-description>
+     </mat-expansion-panel-header>
+     <div>
+     <mat-tab-group mat-align-tabs="end" [selectedIndex]="element.idFiliere"
+     (selectedIndexChange)="showModule($event,element.idFiliere )">
+             <mat-tab label="Infos Filieres"> 
+                 <mat-list>
+                     <mat-list-item>idFiliere :  {{element.idFiliere}} </mat-list-item>
+                     <mat-list-item>titre :  {{element.titre}} </mat-list-item>
+                     <mat-list-item>type :  {{element.typeFiliere   }} </mat-list-item>
+                     <mat-list-item>departement :  {{element.departement}} </mat-list-item>
+                     <mat-list-item>chefdefiliere :  {{element.chefdefiliere}} </mat-list-item>
+                 </mat-list>
+             </mat-tab>
+             <mat-tab label="Infos Modules"> 
+                    <!-- <table mat-table [dataSource]="dataModules" class="mat-elevation-z8">
+                             
+                             <ng-container matColumnDef="item">
+                               <th mat-header-cell *matHeaderCellDef> Item </th>
+                               <td mat-cell *matCellDef="let eleme"> {{eleme.idFiliere}} </td>
+                             </ng-container>
+                     </table> -->
+                     <mat-grid-list cols="4" rowHeight="100px" *ngFor="let module of element.module;let i=index">
+                             <mat-grid-tile [colspan]="1" [rowspan]="1">
+                                 S{{i%6}}
+                             </mat-grid-tile>
+                             <mat-grid-tile [colspan]="3" [rowspan]="1" >
+                                     No Module: M{{i%6 +1}}  idModule :  {{module.idModule}} titre :  {{module.titre}} 
+                             </mat-grid-tile>
+                           </mat-grid-list>
+             </mat-tab>
+           </mat-tab-group>
+         
+     </div> 
+         <button mat-icon-button (click)="onEdit(element)"><mat-icon>launch</mat-icon></button>
+         <button mat-icon-button (click)="onDelete(element.id)" color="warn"><mat-icon>delete_outline</mat-icon></button>
+ 
+     
+              
+ </mat-expansion-panel>
+ </div>
+ </mat-accordion>

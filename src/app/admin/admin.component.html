@@ -1,1 +1,18 @@
-<p>admin works!</p>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav opened mode="side">
+        <mat-nav-list  class="list-horizontal">
+            <mat-list-item>
+                <a [routerLink]="['/RDV']">Accauil</a>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/piece']">About</a>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/contact']">Contact Us</a>
+            </mat-list-item>
+        </mat-nav-list> 
+    </mat-sidenav>
+    
+    <app-valider-avis></app-valider-avis>
+  </mat-sidenav-container>
+  

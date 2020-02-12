@@ -3,6 +3,9 @@ export interface Professeur {
   nom: string;
   prenom: string;
   module: string[];
+  datenaissance: string;
+  ville: string;
+  Tel: string;
   password: string;
   email: string;
 }

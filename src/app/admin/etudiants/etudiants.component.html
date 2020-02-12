@@ -1,0 +1,35 @@
+<mat-accordion >
+    <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+<div *ngFor='let element of dataSource '>
+<mat-expansion-panel (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false">
+    <mat-expansion-panel-header >
+        <mat-panel-title class=".example-full-width">
+            {{element.cin}}
+        </mat-panel-title>
+        <mat-panel-title class=".example-full-width">
+                {{element.nom +" "+element.prenom}}
+        </mat-panel-title>
+        <mat-panel-description class=".example-full-width">
+                {{element.datenaissance }}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+<mat-list>
+        <mat-list-item>Nom :  {{element.nom}} </mat-list-item>
+        <mat-list-item>Prenom :  {{element.prenom}} </mat-list-item>
+        <mat-list-item>CIN :  {{element.cin}} </mat-list-item>
+        <mat-list-item>Date de naissance :  {{element.datenaissance | date : 'MM/dd/yyyy'}} </mat-list-item>
+        <mat-list-item>Ville :  {{element.ville}} </mat-list-item>
+        <mat-list-item>Tel :  {{element.Tel}} </mat-list-item>
+        <mat-list-item>Email :  {{element.email}} </mat-list-item>
+        <mat-list-item >Numro Appogee :  {{element.nAppogee}} </mat-list-item>
+        <mat-list-item >Filier :  {{element.filier}} </mat-list-item>
+    </mat-list>
+    <button mat-button (click)="onClickMe()">Modifier le compte</button>
+    <button mat-icon-button (click)="onEdit(element)"><mat-icon>launch</mat-icon></button>
+    <button mat-icon-button (click)="onDelete(element.id)" color="warn"><mat-icon>delete_outline</mat-icon></button>
+</mat-expansion-panel>
+</div>
+</mat-accordion>

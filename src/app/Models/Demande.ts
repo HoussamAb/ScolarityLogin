@@ -2,5 +2,7 @@ export interface Demande {
   id: number;
   idEtudiant: string;
   idPiece: number;
-  date: string;
+  date_creation: string;
+  date_recuperation:string;
+  siValide:boolean;
 }

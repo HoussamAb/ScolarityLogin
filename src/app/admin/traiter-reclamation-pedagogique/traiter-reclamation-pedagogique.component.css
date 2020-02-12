@@ -1,0 +1,28 @@
+.main-card{
+
+  margin: 20px;
+    width: 400px;
+    padding:0px; }
+  
+ 
+  .main_div{
+    margin-left: 200px;
+  }
+ 
+  .txt{
+    font-weight: bold; 
+  }
+  .title{
+    font-size: 18px;
+  }
+  
+  .content{
+    margin-top: 8px;
+    padding: 16px;
+  }
+  .h1{
+    background-color: #DCDCDC;
+  }
+  h3{
+    text-align: center;
+  }

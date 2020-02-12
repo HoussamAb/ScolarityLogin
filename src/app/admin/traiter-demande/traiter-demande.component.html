@@ -1,0 +1,42 @@
+<div class="main_div" fxLayout="column" fxLayoutAlign="space-evenly center" >
+
+  <h3>Traitement des demandes de pièces</h3>
+  <div class="example-container">
+
+  </div>
+  <div   *ngIf="etudiants">
+
+<ng-container *ngFor="let demande of demandes;">
+  <div *ngFor="let etudiant of etudiants">
+    
+  <mat-card class = "main-card" *ngIf="etudiant.id==demande.idEtudiant">
+    <mat-card-header>
+      <mat-list>
+        <mat-list-item>
+          <mat-card-title class="title" >{{etudiant.apogee}} {{etudiant.nom}} {{etudiant.prenom}} {{etudiant.cin}}</mat-card-title>
+    </mat-list-item>
+    <mat-divider class="divv"></mat-divider>
+    </mat-list>
+  
+    </mat-card-header>
+
+    <mat-card-content class="content">
+      <div ><span style="font-weight: bold;">Date Demande : </span> {{demande.date_creation}} </div>
+
+      <p><span style="font-weight: bold;">Pièce demandée : </span>  {{demande.idPiece}}</p>
+      <div  layout-align = "start center">
+        <span style="font-weight: bold;">RDV : </span>  {{demande.date_recuperation}}
+      
+        <div align="end">
+          <button class="btn" mat-flat-button (click)="Valider(demande)" value="{{demande.id}}">Valider</button>
+    
+          </div>
+        </div>
+      </mat-card-content> 
+  </mat-card>
+</div>
+</ng-container>
+
+</div>
+</div>
+

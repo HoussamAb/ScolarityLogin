@@ -1,6 +1,9 @@
+import { Module } from './Module';
+
 export interface Filiere {
-  id: number;
-  module: string[];
+  idFiliere: string;
+  typeFiliere: string;
+  module: Module[];
   titre: string;
   departement: string;
   chefdefiliere: string;

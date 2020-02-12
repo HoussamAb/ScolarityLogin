@@ -1,5 +1,5 @@
 export interface Module {
-  id: string;
+  idModule: string;
   titre: string;
   idfiliere: number;
   Chargehoraire: number;

@@ -1,0 +1,48 @@
+<div class="main_div" fxLayout="column" fxLayoutAlign="space-evenly center" >
+
+  <h3>Validation des Avis</h3>
+
+    <div class="example-container">
+  
+    </div>
+    <div *ngIf="professeurs">
+  
+  <ng-container *ngFor="let avi of avis;">
+    <div *ngFor="let professeur of professeurs">
+      
+    <mat-card class = "main-card" *ngIf="professeur.id==avi.idprof">
+      <mat-card-header>
+        <mat-list>
+          <mat-list-item>
+            <mat-card-title class="title" >
+              <div >{{avi.title}}  
+              </div>
+            </mat-card-title>
+      </mat-list-item>
+      <mat-divider class="divv"></mat-divider>
+      </mat-list>
+    
+      </mat-card-header>
+  
+      <mat-card-content class="content">
+        
+        <div ><span style="font-weight: bold;">Date Avis :</span> {{avi.date}} </div>
+        <div><p><span style="font-weight: bold;">Professeur :</span> {{professeur.nom}} {{professeur.prenom}}</p></div>
+
+  
+        <p><span style="font-weight: bold;">Avis:</span>  {{avi.corp}}</p>
+        <div  layout-align = "start center">
+          <div align="end">
+            <button  mat-flat-button color="primary"  (click)="Valider(avi)">Valider</button>
+      
+            </div>
+          </div>
+        </mat-card-content> 
+    </mat-card>
+  </div>
+  </ng-container>
+  
+  </div>
+  </div>
+  
+  

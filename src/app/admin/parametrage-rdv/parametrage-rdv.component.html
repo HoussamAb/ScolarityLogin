@@ -1,0 +1,71 @@
+ <div class="main_div" fxLayout="column" fxLayoutAlign="space-evenly center" >
+   <h3>Paramétrage des RDV</h3>
+
+  <mat-form-field>
+    <mat-label>Filtrer</mat-label>
+    <input matInput (keyup)="applyFilter($event)" >
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  
+    <!-- id Column -->
+    <ng-container matColumnDef="id" type="hidden" >
+        <th mat-header-cell *matHeaderCellDef  ></th>
+        <td mat-cell *matCellDef="let element" > </td>
+    </ng-container>
+  
+    <!-- fullname Column -->
+    <ng-container matColumnDef="label" >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="title"> Libellé </th>
+        <td mat-cell *matCellDef="let element" > {{element.label}} </td>
+    </ng-container>
+  
+    <!-- ispermanent Column -->
+    <ng-container matColumnDef="siCache" type="hidden" >
+        <th mat-header-cell *matHeaderCellDef > </th>
+        <td mat-cell *matCellDef="let element" > </td>
+    </ng-container>
+  
+     <!-- ispermanent Column -->
+     <ng-container matColumnDef="nbr_total" type="hidden">
+      <th mat-header-cell *matHeaderCellDef > </th>
+      <td mat-cell *matCellDef="let element" ></td>
+  </ng-container>
+  
+    <!-- ispermanent Column -->
+    <ng-container matColumnDef="nbr_total_par_jour" type="hidden">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="tit">Nombre par jour</th>
+      <td mat-cell *matCellDef="let element; let i = index">
+        
+        <form [formGroup]="Nb_jour">
+         
+          <mat-form-field  >
+            <input  formControlName="nbjour" matInput type="number"  min="0" class="form-control"  
+              (change)="changer(i)"  value="{{element.nbr_total_par_jour}}" (click)="cliquer(i)"> 
+          </mat-form-field>
+          
+            <button  *ngIf="i==etat" value="index"  mat-icon-button 
+                  color="primary"  (click)="Update(element)" >
+                <mat-icon  >done</mat-icon>
+              </button>
+        </form>
+                
+     </td>
+  </ng-container>
+    <!-- ispermanent Column -->
+    <ng-container matColumnDef="nbr_demande_par_jour" type="hidden">
+      <th mat-header-cell *matHeaderCellDef type="hidden"> </th>
+      <td mat-cell *matCellDef="let element" > </td>
+  </ng-container>
+  
+   <!-- ispermanent Column -->
+   <ng-container matColumnDef="date_prochain_rdv">
+    <th mat-header-cell *matHeaderCellDef class="tit">Prochain RDV</th>
+    <td mat-cell *matCellDef="let element;" >{{element.date_prochain_rdv}}</td>
+</ng-container>
+    
+   
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  </div>

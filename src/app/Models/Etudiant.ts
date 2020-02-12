@@ -1,6 +1,6 @@
 export interface Etudiant {
   nom: string ;
-  apogee: number;
+  apogee: string;
   cin: string;
   prenom: string;
   datenaissance: string;

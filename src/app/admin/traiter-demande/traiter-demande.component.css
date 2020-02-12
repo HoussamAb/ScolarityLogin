@@ -1,0 +1,46 @@
+
+.main-card{
+
+  margin-top: 16px;
+  width: 500px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #E6A617;
+}
+
+ .example-container .mat-form-field + .mat-form-field {
+  margin-left: 12px;
+  
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+.txt{
+  font-weight: bold; 
+}
+
+.title{
+  text-align: right;
+  flex: auto;
+}
+
+.content{
+  margin-top: 8px;
+  
+}
+.divv{
+
+  border-top-style: solid;
+  border-width: 2px;
+  border-color: #E6A617;
+}
+.btn{
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+
+}
+.main_div{
+  margin-top: 10px;
+}

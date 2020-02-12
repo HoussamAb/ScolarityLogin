@@ -1,0 +1,27 @@
+table {
+    width: 50%;
+    margin-top: 10px;
+  }
+  button {
+    margin: 16px 8px;
+  }
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+}
+.tit{
+  text-align: center;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+}
+.add{
+  background-color: #E6A617;
+}
+.nb{
+  width: 12px;
+}
+  

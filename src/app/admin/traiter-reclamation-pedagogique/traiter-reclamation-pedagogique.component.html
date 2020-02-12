@@ -1,0 +1,38 @@
+<h3>Traitement des réclamations pédagogiques</h3>
+
+<div class="main_div" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+ 
+  <mat-card class = "main-card"  *ngFor="let reclamation of reclamations;">
+    <div *ngFor="let etudiant of etudiants">
+    <div *ngIf="etudiant.id==reclamation.etudiant">
+      <div >
+    <mat-card-header class="h1">
+      <mat-list>
+        <mat-list-item>
+          <mat-card-title class="title" >{{etudiant.apogee}} {{etudiant.nom}} {{etudiant.prenom}} {{etudiant.cin}}</mat-card-title>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    </mat-list>
+  
+    </mat-card-header>
+  </div>
+    <mat-card-content class="content">
+      <div ><span style="font-weight: bold;">Date réclamation : </span> {{reclamation.date}}</div>
+  
+       
+        <div  layout-align = "start center">
+          <p>
+            <span style="font-weight: bold;"> Réclamation : </span> {{reclamation.commantaire}}
+         </p></div>
+
+        <div align="end">
+          <button  mat-flat-button color="primary" (click)="Valider(reclamation)" value="{{reclamation.id}}">Valider</button>
+    
+          </div>
+      </mat-card-content> 
+    </div>
+  </div>
+  </mat-card>
+
+
+</div>
