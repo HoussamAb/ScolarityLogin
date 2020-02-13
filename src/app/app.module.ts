@@ -32,6 +32,8 @@ import { OperateursComponent } from './admin/operateurs/operateurs.component';
 import { ProfesseursComponent } from './admin/professeurs/professeurs.component';
 import { OperateurDialogComponent } from './admin/operateurs/operateur-dialog/operateur-dialog.component';
 import { ProfesseurDialogComponent } from './admin/professeurs/professeur-dialog/professeur-dialog.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { SidebarComponent } from './main-layout/sidebar/sidebar.component';
 
 
 
@@ -57,7 +59,7 @@ import { ProfesseurDialogComponent } from './admin/professeurs/professeur-dialog
     ProfesseursComponent,
     EtudiantDialogComponent, 
     OperateurDialogComponent, 
-    ProfesseurDialogComponent, 
+    ProfesseurDialogComponent, MainLayoutComponent, SidebarComponent, 
   ],
   imports: [
     BrowserModule,

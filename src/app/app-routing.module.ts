@@ -17,7 +17,7 @@ import { FilieresComponent } from './admin/filieres/filieres.component';
 import { ListFilieresComponent } from './admin/filieres/list-filieres/list-filieres.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'home', pathMatch:'full'},
+  {path:'', redirectTo:'reclamationNote', pathMatch:'full'},
   {path:'admin', component:AdminComponent},
   {path:'traiterDemande', component:TraiterDemandeComponent},
   {path:'piece', component:PiecesComponent},

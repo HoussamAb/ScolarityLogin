@@ -43,6 +43,7 @@ export class FilieresDialogComponent implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
+    this.router.navigateByUrl('/list-filieres');
   }
 
   onClear(){
@@ -74,8 +75,10 @@ export class FilieresDialogComponent implements OnInit {
        this.service.form.reset();
      }
      this.service.initializeFormGroup();
+     
    }
   this. onNoClick();
+  this.router.navigateByUrl('/list-filieres');
  }
 
  update(){

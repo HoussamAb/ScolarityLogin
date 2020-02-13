@@ -40,6 +40,7 @@ ngOnInit() {
 
 onNoClick(): void {
   this.dialogRef.close();
+  this.router.navigateByUrl('/etudiants');
 }
 
 onClear(){
@@ -72,8 +73,10 @@ this.service.updateEtudiant(this.etudiant).subscribe();
      this.service.form.reset();
    }
    this.service.initializeFormGroup();
+   
  }
 this. onNoClick();
+
 
 }
 update(){

@@ -9,6 +9,7 @@ import { AccountOperateurService } from 'src/app/services/account-operateur.serv
 import { AccountService } from 'src/app/services/account.service';
 import { AccountProfesseurService } from 'src/app/services/account-professeur.service';
 import { FilieresService } from 'src/app/services/filieres.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-account',
@@ -82,7 +83,9 @@ export class AddAccountComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder, private service: AccountService,
                 private serviceoperateur:AccountOperateurService, 
                 private serviceprof:AccountProfesseurService,
-                private serviceFiliere:FilieresService) 
+                private serviceFiliere:FilieresService,
+                private router:Router
+              ) 
                 {}
   
   ngOnInit() {
@@ -97,10 +100,10 @@ export class AddAccountComponent implements OnInit {
       
     });
     this.secondFormGroup = this._formBuilder.group({
-      ctrlEmail: ['',Validators.required],
-      ctrlFilier: ['',Validators.required],
-      ctrlModules: ['',Validators.required],
-      ctrlNAppogee: ['',Validators.required]
+      ctrlEmail: '',
+      ctrlFilier: '',
+      ctrlModules: '',
+      ctrlNAppogee: '',
     });
 
     this.serviceFiliere.getAll().subscribe(res => {
@@ -119,16 +122,16 @@ export class AddAccountComponent implements OnInit {
     this.ville = this.firstFormGroup.controls.ctrlVille.value; 
     this.tel = this.firstFormGroup.controls.ctrlTel.value; 
     this.typeOfAcc = this.firstFormGroup.controls.ctrlTyptOfAcc.value;
-    if (this.typeOfAcc === "Etudiant"){
+    if (this.typeOfAcc === "etudiant"){
         this.etudiant=true;
         this.professeur=false;
         this.operateur=false;
         
-    }else if(this.typeOfAcc === "Professeur"){
+    }else if(this.typeOfAcc === "professeur"){
         this.professeur=true;
         this.etudiant=false;
         this.operateur=false;
-    }else if(this.typeOfAcc === "Operateur"){
+    }else if(this.typeOfAcc === "operateur"){
       this.operateur=true;
       this.etudiant=false;
       this.professeur=false;
@@ -136,9 +139,9 @@ export class AddAccountComponent implements OnInit {
     console.log(this.firstFormGroup.controls.ctrlTyptOfAcc.value)
   }
 
-  showInputData(){
-
-    if (this.typeOfAcc === "Etudiant"){
+showInputData(){
+console.log("hello !!!!!!!!")
+    if (this.typeOfAcc === "etudiant"){
       this.email = this.secondFormGroup.controls.ctrlEmail.value; 
       this.filier = this.secondFormGroup.controls.ctrlFilier.value;  
       this.nAppogee = this.secondFormGroup.controls.ctrlNAppogee.value;
@@ -157,7 +160,7 @@ export class AddAccountComponent implements OnInit {
       this.etudiantAdd.semestre= [];
       this.etudiantAdd.noteModule= 0;
       
-    }else if(this.typeOfAcc === "Professeur"){
+    }else if(this.typeOfAcc === "professeur"){
       this.email = this.secondFormGroup.controls.ctrlEmail.value;  
       this.modules = this.secondFormGroup.controls.ctrlModules.value; 
 
@@ -170,7 +173,7 @@ export class AddAccountComponent implements OnInit {
       this.professeurAdd.password= this.CIN.toString();
       this.professeurAdd.email= this.email.toString();
 
-    }else if(this.typeOfAcc === "Operateur"){
+    }else if(this.typeOfAcc === "operateur"){
       this.email = this.secondFormGroup.controls.ctrlEmail.value;  
 
       this.operateurAdd.cin= this.CIN.toString();
@@ -188,22 +191,26 @@ export class AddAccountComponent implements OnInit {
   professeurs:Professeur[]=[];
   operateurs:Operateur[]=[];
   addAcc(){
-    if(this.typeOfAcc === "Etudiant"){
+    if(this.typeOfAcc === "etudiant"){
       this.service.addEtudiant(this.etudiantAdd)
         .subscribe((etudiantAdd)=>{
           this.etudiants=[etudiantAdd,...this.etudiants]
       });
-    }if(this.typeOfAcc === "Professeur"){
+      
+    }if(this.typeOfAcc === "professeur"){
       this.serviceprof.addProfesseur(this.professeurAdd)
         .subscribe((professeurAdd)=>{
           this.professeurs=[professeurAdd,...this.professeurs]
       });
-    }else if(this.typeOfAcc === "Operateur"){
+      
+    }else if(this.typeOfAcc === "operateur"){
       this.serviceoperateur.addOperateur(this.operateurAdd)
       .subscribe((operateurAdd)=>{
         this.operateurs=[operateurAdd,...this.operateurs]
       });
+     
     }
+    this.router.navigateByUrl('/'+this.typeOfAcc+'s');
   }
 
 }

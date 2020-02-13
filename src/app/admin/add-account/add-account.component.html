@@ -1,13 +1,13 @@
-
+<mat-toolbar>Ajouter un Compte</mat-toolbar>
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup"  >
       <form [formGroup]="firstFormGroup" class="controles-container">
         <ng-template matStepLabel>Etat civile : </ng-template> 
         <div class="example-full-width marg">
                 <mat-radio-group aria-label="Select an option" formControlName="ctrlTyptOfAcc" required>
-                    <mat-radio-button class=" marg"  value="Etudiant"> Etudiant  </mat-radio-button>
-                    <mat-radio-button class=" marg"  value="Professeur"> Professeur  </mat-radio-button>
-                    <mat-radio-button class=" marg"  value="Operateur"> Operateur  </mat-radio-button>
+                    <mat-radio-button class=" marg"  value="etudiant"> Etudiant  </mat-radio-button>
+                    <mat-radio-button class=" marg"  value="professeur"> Professeur  </mat-radio-button>
+                    <mat-radio-button class=" marg"  value="operateur"> Operateur  </mat-radio-button>
                 </mat-radio-group>
             </div>
         <div class="form-group">
@@ -116,7 +116,7 @@
             </div>
         <div>
           <button mat-flat-button color="accent" matStepperPrevious>Retour</button>
-          <button mat-flat-button color="accent" matStepperNext (click)="showInputData()">Suivant</button>
+          <button mat-button mat-flat-button color="accent" matStepperNext (click)="showInputData()">Suivant</button>
         </div>
       </form>
     </mat-step>
@@ -133,7 +133,7 @@
             <mat-list-item>Email :  {{email}} </mat-list-item>
             <div *ngIf='etudiant'><mat-list-item >Numro Appogee :  {{nAppogee}} </mat-list-item></div>
             <div *ngIf='etudiant'><mat-list-item >Filier :  {{filier}} </mat-list-item></div>
-            <div *ngIf='professeur || operateur'><mat-list-item>Modules :  {{modules}} </mat-list-item></div>
+            <div *ngIf='professeur '><mat-list-item>Modules :  {{modules}} </mat-list-item></div>
         </mat-list>
       <div>
         <button mat-flat-button color="accent" matStepperPrevious>Retour</button>

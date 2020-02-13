@@ -1,51 +1,54 @@
+<mat-toolbar>Creation Filiere</mat-toolbar>
 <mat-vertical-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>Information sur la Filiere :</ng-template>
         <mat-grid-list cols="3" rowHeight="3:1">
-            <mat-grid-tile> <h4>Idt Filiere :</h4>
+            <mat-grid-tile> 
                 <mat-form-field appearance="standard">
-                    <input matInput placeholder="Identifiant" formControlName="idFiliere" required>
+                    <mat-label>Identifiant Filiere :</mat-label>
+                    <input matInput placeholder="id ..." formControlName="idFiliere" required>
                 </mat-form-field>
             </mat-grid-tile>
-            <mat-grid-tile> <h4>Type Filiere :</h4>
+            <mat-grid-tile> 
               <mat-form-field>
-                  <mat-label>Type</mat-label>
+                  <mat-label>Type Filiere :</mat-label>
                   <mat-select formControlName="typeFiliere" required>
                     <mat-option>None</mat-option>
                     <mat-option *ngFor="let type of typesF" [value]="type">{{type}}</mat-option>
                   </mat-select>
                 </mat-form-field>
             </mat-grid-tile>
-            <mat-grid-tile> <h4>Titre Filiere :</h4>
+            <mat-grid-tile> 
                 <mat-form-field appearance="standard">
+                    <mat-label>Titre Filiere :</mat-label>
                     <input matInput placeholder="Placeholder" formControlName="titre" required>
                 </mat-form-field>
             </mat-grid-tile>
-            <mat-grid-tile> <h4>DeptFiliere :</h4>
+            <mat-grid-tile>
                 <mat-form-field >
-                    <mat-label>Departement</mat-label>
+                    <mat-label>Departement Filiere :</mat-label>
                     <mat-select formControlName="departement" required>
                         <mat-option>None</mat-option>
                         <mat-option *ngFor="let deptype of departements" [value]="deptype">{{deptype}}</mat-option>
                       </mat-select>
                 </mat-form-field>
             </mat-grid-tile>
-            <mat-grid-tile> <h4>Chef Filiere :</h4>
+            <mat-grid-tile>
                 <mat-form-field>
-                    <mat-label>TyChef Filiere</mat-label>
-                    <mat-select formControlName="chefdefiliere" required>
-                      <mat-option>None</mat-option>
-                      <mat-option *ngFor="let p of prof" [value]="p">{{p.nom +" "+ p.prenom}}</mat-option>
-                    </mat-select>
-                  </mat-form-field>
+                        <mat-label>Chef Filiere :</mat-label>
+                        <mat-select formControlName="chefdefiliere" required>
+                          <mat-option>None</mat-option>
+                          <mat-option *ngFor="let p of prof" [value]="p.nom +''+ p.prenom">{{p.nom +" "+ p.prenom}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
             </mat-grid-tile>
-            <mat-grid-tile></mat-grid-tile>
             <mat-grid-tile> 
                 <div>
-                    <button mat-button matStepperNext (click)="show()">Suivant</button>
+                    <button mat-flat-button color="accent" matStepperNext (click)="show()">Suivant</button>
                   </div>
             </mat-grid-tile>
+            
         </mat-grid-list>
     
       </form>
@@ -133,17 +136,17 @@
         </mat-list>
         
         <div>
-          <button mat-button matStepperPrevious >Retour</button>
-          <button mat-button matStepperNext (click)="addmodule()">Suivant</button>
+          <button mat-flat-button color="accent" style="margin-right: 20px;" matStepperPrevious >Retour</button>
+          <button mat-flat-button color="accent" style="margin-right: 20px;" matStepperNext (click)="addmodule()">Suivant</button>
         </div>
       </form>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
+      <ng-template matStepLabel>Terminé</ng-template>
       <p>Maintenat vous pouvez Entregistrer la filiere.</p>
       <div>
-        <button mat-button matStepperPrevious>Retour</button>
-        <button mat-button (click)="addF()">Enregitrer</button>
+        <button mat-flat-button color="accent" style="margin-right: 20px;" matStepperPrevious>Retour</button>
+        <button mat-flat-button color="accent" style="margin-right: 20px;" (click)="addF()">Enregitrer</button>
       </div>
     </mat-step>
   </mat-vertical-stepper>

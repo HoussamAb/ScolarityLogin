@@ -1,4 +1,55 @@
-
-
-
-<router-outlet></router-outlet>
+<mat-toolbar color="primary" class="f">
+    <h1> Administrateur</h1>
+    Faculté 
+    
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav opened mode="side" >
+        <mat-nav-list  class="list-horizontal">
+            <mat-list-item>
+                <a [routerLink]="['/']">Acceuil</a>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/addaccount']">Créer Compte</a>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/etudiants']">Compte Etudiants</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['/operateurs']">Compte Opérateurs</a>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/professeurs']">Compte Professeurs</a>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/filieres']">Créer Filiere</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['/list-filieres']">Gestion Filiere</a>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/avis']">Validation des Avis</a>
+              </mat-list-item>
+              <mat-list-item>
+                <a [routerLink]="['/traiterDemande']">Traietement des demandes</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['/piece']">Gestion de pièces</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['/RDV']">Paramétrage des RDV</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['/reclamationNote']">Réclamations de note</a>
+            </mat-list-item>
+            <mat-list-item>
+                <a [routerLink]="['/reclamation']">Réclamations pédagogiques</a>
+            </mat-list-item>
+        </mat-nav-list> 
+    </mat-sidenav>
+    <div class="h ">
+        <router-outlet></router-outlet>
+    </div>
+    
+  </mat-sidenav-container>
+  

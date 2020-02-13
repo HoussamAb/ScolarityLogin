@@ -22,6 +22,8 @@ export class PieceComponent implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
+    this.router.navigateByUrl('/piece');
+
   }
 
   ngOnInit() {
@@ -68,10 +70,14 @@ export class PieceComponent implements OnInit {
      this.service.initializeFormGroup();
    }
   this. onNoClick();
+  this.router.navigateByUrl('/piece');
+
 
  }
  update(){
   this.service.updatePiece(this.piece).subscribe();
+  this.router.navigateByUrl('/piece');
+
 }
  
 }

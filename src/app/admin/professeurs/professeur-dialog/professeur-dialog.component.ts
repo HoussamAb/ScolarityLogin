@@ -34,6 +34,7 @@ ngOnInit() {
 
 onNoClick(): void {
 this.dialogRef.close();
+this.router.navigateByUrl('/professeurs');
 }
 
 onClear(){
@@ -68,6 +69,7 @@ if(this.service.form.valid){
  this.service.initializeFormGroup();
 }
 this. onNoClick();
+
 
 }
 update(){

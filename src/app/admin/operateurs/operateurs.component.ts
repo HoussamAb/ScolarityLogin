@@ -64,6 +64,7 @@ export class OperateursComponent implements OnInit {
         duration: 4000,
       });
       this.fetchElements();
+      this.route.navigateByUrl('/operateurs');
     })
   
   }

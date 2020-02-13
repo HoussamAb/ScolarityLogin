@@ -34,6 +34,7 @@ ngOnInit() {
 
 onNoClick(): void {
   this.dialogRef.close();
+  this.router.navigateByUrl('/operateurs');
 }
 
 onClear(){
@@ -69,9 +70,11 @@ this.service.updateOperateur(this.operateur).subscribe();
  }
 this. onNoClick();
 
+
 }
 update(){
 this.service.updateOperateur(this.operateur).subscribe();
+
 }
 
 }
